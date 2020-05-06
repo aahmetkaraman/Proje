@@ -19,3 +19,16 @@
 #resimler .img{
     width: 100%;
 }
+.miraslar .miras{
+    flex-direction: column;
+}
+.miraslar .miras .miras-bilgi{
+ display: flex;
+ flex-direction: column;
+}
+.miraslar .miras .miras-resim{
+    margin: 0 auto;
+}
+.tablo .tablom{
+    font-size: 1rem;
+}

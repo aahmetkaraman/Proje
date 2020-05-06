@@ -12,6 +12,21 @@
 .heading-big{
     font-size: 1.75rem;
 }
+/* Buton */
+.btn {
+    margin-top: 1.25rem!important;
+    padding: 0.8rem 3rem!important;
+    border-radius: 7px!important;
+    letter-spacing: 0.4px!important;
+}
+.btn-primary{
+    color: white;
+    background: #336ea2;
+}
+.btn-block {
+    width: 100%;
+    text-align: center;
+  }
 
 /* Colors */
 
@@ -26,3 +41,39 @@
     max-width: 1100px;
     margin: 0 auto;
     }
+/* Form */
+.form-grup{
+    padding:0.25rem 0;
+}
+.form-grup labe{
+    display: block;
+}
+.form-kontrol{
+width: 100%;
+padding:0.5rem;
+font-size: 1.25rem;
+resize: none; /* İlk bulunduğu halde kalıcak */
+border-radius: 5px;
+}
+/* Login */
+.form-group{
+    padding:1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-text{
+    display:block;
+    margin-top:.25rem;
+}
+#text-muted{
+    color: #6c757d;
+}
+.form-control:invalid{
+    border-color:#dc3545;
+}
+.login-yeri{
+    display: flex;
+    flex-direction: column;
+
+    
+}
