@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+html {
+    font-family: "Open sans", sans-serif;
+}
+
+/* Bar */
+#bar {
+    color: #fff;
+    /* Tüm renkler bardaki beyaz oldu */
+    display: flex;
+    /* Yazı ve list elemanları yan yana geldi */
+    /*  bu ve altındakilerden dolayı satır olarak yerleştiriyor.*/
+    justify-content: space-between;
+    /* Başlığı ve list elemanlarını ayırdın. */
+    align-items: center;
+    /* Dikeyde ortalandı  */
+    padding: 0 0.5rem;
+    height: 80px;
+}
+
+#bar ul {
+    list-style-type: none;
+    /* List elemanlarındaki yuvarlaklar kalktı. */
+    display: flex;
+    /* List elemanlarını yan yana getirdi. */
+    align-items: center;
+}
+
+#bar ul li a {
+    padding: 0.5rem;
+    /* Listdeki a etiketleri çok bitişikti. Boşluk bıraktırdık. */
+}
+
+#bar ul li a:hover {
+    background: #336ea2;
+    border-radius: 4px;
+}
+
+
+
+/* Ana sayfa Section */
+.ad {
+    display: flex;
+    /*Resim ile yazıyı yan yana aldık */
+    flex-direction: column;
+    /*Sonra yan yana gelmesini istemediğimiz için alt alta aldık */
+    justify-content: center;
+    /* Resmi x ekseninde ortaya taşıdık */
+    align-items: center;
+    /* Resmi y ekseninde ortaya taşıyıp sayfanın tam ortasına gelmiş oldu.*/
+    padding: 2rem;
+    /*navbar ile boşluk bıraktırdık. */
+    border-bottom: 1px solid grey;
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    /*yüksekliğini bilmediğimiz için yüksekliğin tam değerini alsın istiyoruz. */
+}
+
+.ad h2 {
+    margin-bottom: 0.5rem;
+    /*Başlığa aşağıdan boşluk bıraktık */
+}
+
+.ad p {
+    opacity: 0.6;
+    /*Resmin altındaki yazının bulanıklığını arttırdık */
+    font-style: italic;
+}
+
+/* Hakkımda */
+#hakkimda {
+    color: #fff;
+    padding: 0.75rem;
+}
+
+#hakkimda .itemler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hakkimda .itemler .item {
+    width: 33%;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* Resimler kısmı */
+#resimler {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#resimler .img {
+    width: 33%;
+    height: auto;
+}
+
+
+/* Şehrim */
+.slider {
+    overflow: hidden;
+}
+
+.slider .slider_liste {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    animation: 40s slider infinite;
+
+
+}
+
+.slider ul.slider_liste li {
+    font-size: 0;
+    width: 100%;
+
+}
+
+.slider ul.slider_liste li a img {
+    width: 25%;
+    height: 65vh;
+    float: left;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+
+    
+    25% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+   
+    75% {
+        left: -300%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+
+/* Sehrim açıklama */
+#sehrim {
+    display: flex;
+    
+}
+
+#sehrim  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sehrim  .rize-bilgi{
+    display: flex;
+    padding:.5rem;
+    flex-direction: column;
+    font-size: 1.10em;
+}
+#sehrim .rize-bilgi .aciklama{
+    padding:.5rem;
+}
+
+
+
+
+
+/* Miras */
+#mirasimiz {
+    color: #333;
+}
+
+.miraslar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0px;
+    margin-top: 0px;
+
+}
+
+.miraslar .miras {
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.miraslar .miras .miras-resim {
+    margin-right: 0.5rem;
+    position: relative;
+
+}
+
+.miraslar .miras .aciklama {
+    margin: 0.75rem;
+}
+
+.miraslar .miras .miras-bilgi .baslik {
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.miraslar .miras .miras-bilgi .aciklama {
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+/* Özgeçmiş */
+
+.tablo .tablom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+table,
+td,
+th,
+tr {
+    padding: 1.5rem;
+
+}
+
+/* İletişim */
+#iletisim {
+    color: #fff;
+    height: 100vh;
+}
+
+#iletisim .iletisim-form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+#iletisim .iletisim-form ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 1rem;
+    align-self: center;
+    /* Sadece ul nin ortalanmasını istediğim için böyle yazdım */
+}
+
+#iletisim .iletisim-form ul li a {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+#iletisim .iletisim-form ul li a:hover {
+    opacity: 0.7;
+}
