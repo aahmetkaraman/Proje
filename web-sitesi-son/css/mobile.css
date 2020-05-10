@@ -1,0 +1,38 @@
+body{
+    overflow-x: hidden;
+}
+#bar {
+    flex-direction: column; /* Yukarıdan aşağıya doğru yerleştirir. */
+    padding-top:1rem;
+    padding-bottom: 1.5rem; /* aşağıdan ve yukarıdan boşluklar veriyorum çok içiçeler  */
+    font-size: 0.70rem; /* Yazıları küçültüyorum ki gözüksünler */
+    overflow: hidden; /* Taşmasını önlüyorum */
+    height: 100px;
+}
+#hakkimda .itemler{
+    flex-direction: column;
+}
+#hakkimda .itemler .item{
+    width: 100%;
+}
+#resimler{
+    flex-direction: column;
+
+}
+#resimler .img{
+    width: 100%;
+}
+.miraslar .miras{
+    flex-direction: column;
+}
+.miraslar .miras .miras-bilgi{
+ display: flex;
+ flex-direction: column;
+}
+.miraslar .miras .miras-resim{
+    margin: 0 auto;
+}
+.tablo .tablom{
+    font-size: 1rem;
+}
+

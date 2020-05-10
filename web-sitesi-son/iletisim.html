@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Karamanoğlu</title>
+    <!--Font Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--Css -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- Tablet -->
+    <link rel="stylesheet" media="(max-width:768px)" href="css/tablet.css">
+    <link rel="stylesheet" media="(max-width:500px)" href="css/mobile.css">
+</head>
+
+<body>
+
+    <header class="kapalimavi">
+        <div class="konteiner">
+            <nav id="bar">
+                <h1>Ahmet Karamanoğlu</h1>
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="sehrim.html">Şehrimiz</a></li>
+                    <li><a href="miras.html">Mirasımız</a></li>
+                    <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <div id="iletisim" class="text-center acikmavi">
+        <div class="iletisim-form">
+            <form>
+                <h4 class="text-center heading-medium">Bana ulaşın</h4>
+                <div class="form-grup">
+                    <label for="isim">İsim</label>
+                <input type="text"
+                class="form-kontrol"
+                name="isim"
+                id="isim"
+                placeholder="İsim"
+                />
+                </div>
+                <div class="form-grup">
+                    <label for="email">Email</label>
+                <input type="text"
+                class="form-kontrol"
+                name="email"
+                id="email"
+                placeholder="E-Mail"
+                />
+                </div>
+                <div class="form-grup">
+                    <label for="mesaj">Mesaj</label>
+                <textarea type=""
+                class="form-kontrol"
+                name="mesaj"
+                id="mesaj"
+                placeholder="Mesajınız.."
+                rows="5"
+                ></textarea>
+                </div>
+                <button type="button" id="gonder"onclick="kontrol()" class="btn btn-block">Gönder</button>
+                <button type="button" onclick="temizle()" class="btn btn-block">Temizle</button>
+
+
+            </form>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript"   src="./jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+    var reg= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	
+         
+         function kontrol(){
+             if(document.getElementById("isim").value=="" || document.getElementById("email").value==""  || document.getElementById("mesaj").value=="") {
+                alert("Lütfen Boş Alan Bırakmayınız.");
+                
+             }
+             else if(reg.test(document.getElementById("email").value)==false){
+                alert("Geçersiz E-Posta Adresi Girdiniz Lütfen Tekrar Deneyiniz.");
+             }
+             else{
+                document.write("İsim: "+ document.getElementById("isim").value+ "<br>" + "E mail: "+document.getElementById("email").value+ "<br>"+ "Mesajınız: "+document.getElementById("mesaj").value);
+
+             }
+          
+         }
+         function temizle(){
+            document.getElementById("isim").value="";
+            document.getElementById("email").value="";
+            document.getElementById("mesaj").value="";
+
+         }
+         
+       
+    </script>
+   
+</body>
+</html>
